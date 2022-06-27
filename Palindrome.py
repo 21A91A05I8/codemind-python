@@ -5,7 +5,7 @@ while(n):
     d=n%10
     rev=rev*10+d
     n=n//10
-if(rev==temp):
+if(temp==rev):
     print("True")
 else:
     print("False")
