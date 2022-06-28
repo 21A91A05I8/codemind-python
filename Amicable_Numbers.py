@@ -12,4 +12,3 @@ if(s==b and k==a):
     print("Amicable")
 else:
     print("Not Amicable")
-    
