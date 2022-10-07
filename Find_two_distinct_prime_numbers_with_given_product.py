@@ -1,18 +1,24 @@
 def prime(n):
-    if n==1 or n==0:
-        return False
-    for i in range(2,int(n**0.5)):
-        if n%i==0:
-            return False
-            break
+    c=0
+    for i in range(1,n+1):
+        if(n%i==0):
+            c=c+1
+    if(c==2):
+        return 1
     else:
-        return True
+        return 0
 n=int(input())
-p=1
-c=0
-for i in range(1,(n//2)+1):
-    if n%i==0 and prime(i):
-        print(i,end=" ")
-        c+=1
-if c<1:
-    print(-1)
+f=0
+for i in range(1,n+1):
+    if(prime(i)):
+        for j in range(1,n+1):
+            if(prime(j)):
+                if(i*j==n):
+                    f=1
+                    I=i
+                    g=j
+if(f==0):
+    print("-1")
+else:
+    print(g,I)
+    
