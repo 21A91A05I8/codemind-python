@@ -1,32 +1,28 @@
 def prime(n):
-    if n==0 or n==1:
-        return False
+    c=0
+    for i in range(1,n+1):
+        if(n%i==0):
+            c=c+1
+    if(c==2):
+        return 1
     else:
-        for i in range(2,int(n**0.5)+1):
-            if n%i==0:
-                return False
-        else:
-            return True
-a=int(input())
-for i in range(a):
-    n=int(input())
-    i=n
-    v=n
-    c1=0
-    c2=0
-    while True:
-        if prime(i):
-            z=i
+        return 0
+n=int(input())
+for i in range(n):
+    a=int(input())
+    for j in range(a,1,-1):
+        if(prime(j)):
+            k=j
             break
-        i=i+1
-        c1=c1+1
-    while True:
-        if prime(v):
-            k=v
+    l=a+1
+    while(1):
+        if(prime(l)):
+            m=l
             break
-        v=v-1
-        c2=c2+1
-    if c1>=c2:
+        l=l+1 
+    b=abs(a-k)
+    c=abs(a-m)
+    if(b>c):
+        print(m)
+    else:
         print(k)
-    else:
-        print(z)
