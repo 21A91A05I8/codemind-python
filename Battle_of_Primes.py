@@ -1,17 +1,19 @@
 def prime(n):
-    if n==1 or n==1:
-        return False
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
+    c=0
+    for i in range(1,n+1):
+        if(n%i==0):
+            c=c+1
+    if(c==2):
+        return 1
     else:
-        return True
+        return 0
+n=int(input())
 a=int(input())
-b=int(input())
-k=a+b
-r=1
-while True:
-    if prime(k+r):
-        print(r)
+k=10000
+g=1
+for i in range(1,k):
+    if(prime(a+n+g)):
+        print(g)
         break
-    r=r+1
+    else:
+        g=g+1
